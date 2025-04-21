@@ -1,53 +1,111 @@
-/* High‑contrast, readable defaults */
+/* Import a modern, clean font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+:root {
+  --primary-color: #121212;
+  --bg-color: #f9f9f9;
+  --accent-color: #0066cc;
+  --card-bg: #ffffff;
+  --text-light: #ffffff;
+}
+
 * {
   box-sizing: border-box;
-}
-body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  background: #ffffff;
-  color: #222222;
+  padding: 0;
 }
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg-color);
+  color: var(--primary-color);
+  line-height: 1.6;
+}
+
 a {
-  color: #0066cc;
+  color: var(--accent-color);
   text-decoration: none;
 }
 a:hover {
   text-decoration: underline;
 }
-/* Layout */
+
+/* Header/Nav */
 header {
-  background: #222222;
-  color: #ffffff;
+  background: var(--text-light);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid #e0e0e0;
+}
+nav {
+  max-width: 960px;
+  margin: 0 auto;
   padding: 1rem;
 }
 nav ul {
   display: flex;
+  justify-content: center;
+  gap: 2rem;
   list-style: none;
-  gap: 1rem;
-  margin: 0;
-  padding: 0;
 }
 nav a {
-  color: #ffffff;
-  font-weight: bold;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--primary-color);
 }
+
+/* Hero Section */
+.hero {
+  background: var(--accent-color);
+  color: var(--text-light);
+  text-align: center;
+  padding: 4rem 1rem;
+}
+.hero h1 {
+  font-size: 2.75rem;
+  margin-bottom: 0.5rem;
+}
+.hero p {
+  font-size: 1.125rem;
+  opacity: 0.9;
+}
+
+/* Info Grid */
 main {
-  max-width: 800px;
+  max-width: 960px;
   margin: 2rem auto;
   padding: 0 1rem;
 }
-section {
-  margin-bottom: 2rem;
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
 }
-h1, h2, h3 {
-  margin-top: 1.5rem;
+.info-card {
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.2s;
 }
+.info-card:hover {
+  transform: translateY(-4px);
+}
+.info-card h2 {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+  color: var(--accent-color);
+}
+
 /* Footer */
 footer {
   text-align: center;
-  padding: 1rem;
+  padding: 1.5rem;
   font-size: 0.9rem;
-  background: #f4f4f4;
+  color: #666666;
+  border-top: 1px solid #e0e0e0;
+  margin-top: 3rem;
 }
