@@ -1,19 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
   <title>Proposal Assignment</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
+
   <header>
     <nav>
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="instructions.html">Instructions</a></li>
-        <li><a href="coverletter.html">Cover Letter</a></li>
-        <li><a href="proposal.html">Proposal</a></li>
+        <li>
+          <a href="index.html">About Me ▾</a>
+          <ul class="dropdown-content">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="instructions.html">Instructions</a></li>
+            <li><a href="coverletter.html">Cover Letter</a></li>
+            <li><a href="proposal.html">Proposal</a></li>
+          </ul>
+        </li>
       </ul>
     </nav>
   </header>
@@ -21,13 +27,75 @@
   <main>
     <section>
       <h2>Proposal Assignment</h2>
-      <p><em>Intro:</em> This is my final research proposal, adapted to the UCF Student Research Grant format with refined objectives and methods. (2–3 sentences)</p>
-      <!-- Paste your revised/finalized Proposal Assignment content here -->
+      <p><em>Intro:</em> I refined the original research proposal on algorithmic fairness to improve clarity, structure, and formatting—reorganizing objectives, background, methods, timeline, and deliverables into clear sections. The updated proposal aligns with UCF guidelines and presents a concise, actionable plan for investigating bias mitigation techniques in machine learning algorithms. (2–3 sentences)</p>
+
+      <div class="info-card" style="line-height:1.5; padding:2rem;">
+        <h3>Project Title</h3>
+        <p><strong>Breaking the Bias: Investigating Fairness in Machine Learning Algorithms for Safer and More Ethical AI</strong></p>
+
+        <h3>Objective</h3>
+        <p>This project aims to evaluate and compare bias mitigation techniques in supervised learning algorithms—using datasets such as COMPAS and Adult Income—to identify methods that improve fairness (demographic parity, equal opportunity) without sacrificing accuracy. Supervised by an expert in AI ethics, it seeks actionable insights for developers and policymakers. :contentReference[oaicite:0]{index=0}&#8203;:contentReference[oaicite:1]{index=1}</p>
+
+        <h3>Background &amp; Significance</h3>
+        <p>ML systems in high‑stakes domains (criminal justice, hiring, healthcare) can perpetuate historical biases. Techniques like re‑weighting, algorithmic adjustments, and post‑processing exist, but trade‑offs between fairness and performance remain unresolved. By grounding the study in formal fairness definitions and ethical literature, this research will inform best practices and support UCF’s mission of equitable innovation. :contentReference[oaicite:2]{index=2}&#8203;:contentReference[oaicite:3]{index=3}</p>
+
+        <h3>Research Methods &amp; Timeline</h3>
+        <ul>
+          <li><strong>Weeks 1–2:</strong> Literature review; select & preprocess datasets (COMPAS, Adult Income, German Credit).</li>
+          <li><strong>Weeks 3–4:</strong> Implement baseline models (Logistic Regression, Random Forest, SVM); evaluate accuracy & fairness metrics.</li>
+          <li><strong>Weeks 5–7:</strong> Apply pre‑processing methods (re‑weighting, disparate impact remover); retrain & re‑evaluate.</li>
+          <li><strong>Weeks 8–9:</strong> In‑processing techniques (adversarial debiasing, fairness‑constrained optimization).</li>
+          <li><strong>Weeks 10–11:</strong> Post‑processing (equalized odds, reject option); comparative analysis.</li>
+          <li><strong>Week 12:</strong> Analyze results; identify most effective strategies.</li>
+          <li><strong>Weeks 13–14:</strong> Draft report & visuals.</li>
+          <li><strong>Week 15:</strong> Finalize white paper & poster; prepare for UCF SURE showcase.</li>
+        </ul>
+
+        <h3>Expected Outcomes</h3>
+        <ul>
+          <li>Technical white paper detailing methodology, findings, and trade‑offs.</li>
+          <li>Research poster for UCF SURE presentation.</li>
+          <li>Open‑source GitHub repo with notebooks & documentation.</li>
+          <li>Potential submission to an AI ethics workshop or undergraduate journal. :contentReference[oaicite:4]{index=4}&#8203;:contentReference[oaicite:5]{index=5}</li>
+        </ul>
+
+        <h3>Literature Review</h3>
+        <ul>
+          <li>Barocas, Hardt & Narayanan (2019). *Fairness and Machine Learning*.</li>
+          <li>Mehrabi et al. (2021). “A Survey on Bias and Fairness in ML.” ACM CSUR.</li>
+          <li>Bellamy et al. (2019). “AI Fairness 360” toolkit. IBM JRD.</li>
+          <li>Feldman et al. (2015). “Removing Disparate Impact.” SIGKDD.</li>
+          <li>Hardt, Price & Srebro (2016). “Equality of Opportunity.” NeurIPS.</li>
+          <li>Holstein et al. (2019). “Improving Fairness in ML Systems.” CHI. :contentReference[oaicite:6]{index=6}&#8203;:contentReference[oaicite:7]{index=7}</li>
+        </ul>
+
+        <h3>Preliminary Work &amp; Experience</h3>
+        <p>I’ve completed UCF courses in AI, Data Structures, and Data Science, including a project analyzing gender bias in job ads. I’ve explored COMPAS and Adult Income datasets and ran demos using IBM AIF360 and Fairlearn, preparing me to execute this study under expert mentorship. :contentReference[oaicite:8]{index=8}&#8203;:contentReference[oaicite:9]{index=9}</p>
+
+        <h3>IRB/IACUC Statement</h3>
+        <p>This research does not involve human or animal subjects; IRB/IACUC approval is not required.</p>
+
+        <h3>Budget (Total: $1,460.00)</h3>
+        <table>
+          <thead>
+            <tr><th>Item</th><th>Cost</th><th>Justification</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Cloud computing credits</td><td>$600</td><td>Model training & fairness evaluations.</td></tr>
+            <tr><td>External storage (1TB SSD)</td><td>$120</td><td>Secure dataset & checkpoint storage.</td></tr>
+            <tr><td>Poster printing</td><td>$90</td><td>SURE conference presentation.</td></tr>
+            <tr><td>Books & academic texts</td><td>$100</td><td>Support literature review.</td></tr>
+            <tr><td>Software licenses</td><td>$100</td><td>Premium features (JupyterHub, Colab Pro).</td></tr>
+            <tr><td>Conference travel (in‑state)</td><td>$450</td><td>Hotel, meals, transportation.</td></tr>
+          </tbody>
+        </table>
+      </div>
     </section>
   </main>
 
   <footer>
-    © 2025 Andrew Stoumbos
+    © 2025 Andrew Stoumbos
   </footer>
+
 </body>
 </html>
